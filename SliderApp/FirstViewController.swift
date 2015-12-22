@@ -32,6 +32,8 @@ class FirstViewController: UIViewController {
     
     func showHideBar() {
         self.navigationController?.navigationBarHidden = !(self.navigationController?.navigationBarHidden)!
+        //self.navigationController!.interactivePopGestureRecognizer?.delegate = nil
+        //self.navigationController!.interactivePopGestureRecognizer?.delegate = self.evo_drawerController
     }
     
 }
