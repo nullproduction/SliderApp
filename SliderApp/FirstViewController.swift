@@ -19,10 +19,10 @@ class FirstViewController: UIViewController {
     }
     
     func addShowHideButton() {
-        let button = UIButton(frame: CGRectMake(10, 150, 150, 30))
-        button.setTitle("Show/Hide", forState: .Normal)
+        let button = UIButton(frame: CGRectMake(10, 150, 70, 30))
+        button.setTitle("Hide", forState: .Normal)
         button.setTitleColor(UIColor.redColor(), forState: .Normal)
-        button.addTarget(self, action: "showHideBar", forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: "hide", forControlEvents: .TouchUpInside)
         view.addSubview(button)
     }
     
@@ -30,8 +30,8 @@ class FirstViewController: UIViewController {
         self.navigationController?.pushViewController(SecondViewController(), animated: true)
     }
     
-    func showHideBar() {
-        self.navigationController?.navigationBarHidden = !(self.navigationController?.navigationBarHidden)!
+    func hide() {
+        self.navigationController?.navigationBarHidden = true
         //self.navigationController!.interactivePopGestureRecognizer?.delegate = nil
         //self.navigationController!.interactivePopGestureRecognizer?.delegate = self.evo_drawerController
     }
